@@ -1,0 +1,39 @@
+<h1>Rutas </h1>
+<hr>
+<div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+    <button type="button" class="btn btn-outline-primary"> Todos </button>
+    <button type="button" class="btn btn-outline-primary"> Interno 
+        
+    </button>
+    <button type="button" class="btn btn-outline-primary"> Externo </button>
+
+</div>
+
+<hr>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col animated fadeIn fast" *ngFor="let heroe of heroes ; let i=index">
+        <div class="card h-100">
+            <!--<img [src]="heroe.img" class="card-img-top" alt="...">-->
+
+            <div class="card-body">
+                <h5 class="card-title">{{heroe.origen}}</h5>
+                <p class="card-text">{{heroe.destino}}</p>
+                <p class="card-text">{{heroe.precio}}</p>
+                <p class="card-text">{{heroe.tipo}}</p>
+
+
+                <!--  </div>
+           <div class="card-footer">
+                <small class="text-muted">{{heroe.descripcion}}</small>
+            </div>-->
+                <div class="d-grip gap -2 col-6 mx-auto">
+                    <button (click)="verHeroe(i)" type="button" class="btn btn-outline-primary"> ver mas </button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
